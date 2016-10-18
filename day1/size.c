@@ -12,6 +12,8 @@ int main(void)
 	printf("long\t%zd\n", sizeof(long));
 	printf("long long\t%zd\n", sizeof(long long));
 
+	printf("long double\t%zd\n", sizeof(long double));
+
 	printf("size_t\t%zd\n", sizeof(size_t));
 	printf("void *\t%zd\n", sizeof(void *));
 	printf("func *\t%zd\n", sizeof(void (*)()));
