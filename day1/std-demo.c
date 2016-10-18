@@ -7,5 +7,5 @@ int main(void)
 {
 	int64_t alfa = 97;
 
-	printf(PRId64 "\n", alfa);
+	printf("%" PRId64 "\n", alfa);
 }
