@@ -7,5 +7,9 @@ int main(void)
 	int absents[] = { 1, 1, 9, 2, 0, 3, 4, 1, 0, 3 };
 
 	printf("grades[4] = %d\n", grades[4]);
-	printf("absents[0] = %d\n", absents[0]);
+	printf("absents[3] = %d\n", absents[3]);
+
+	grades[15] = 86;
+
+	printf("absents[3] = %d\n", absents[3]);
 }
