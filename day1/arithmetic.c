@@ -21,9 +21,13 @@ int main(void)
 	printf("c %% b = %d\n", charlie % baker);
 	printf("c %% a = %d\n", charlie % able);
 
+	// Using float as storage would cause 
+	// yankee + zulu to drop the yankee portion
 	double xray = 3.1, yankee = 0.00000041, zulu = 590000;
 
-	printf("%f\n", xray);
-	printf("%f\n", yankee);
-	printf("%f\n", zulu);
+	printf("%.10lf\n", xray);
+	printf("%.10lf\n", yankee);
+	printf("%.10lf\n", zulu);
+
+	printf("%.10lf\n", zulu + yankee);
 }
