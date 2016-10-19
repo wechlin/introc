@@ -13,7 +13,10 @@ int main(void)
 
 	printf("%s\n", greeting);
 
-	printf("%d\n", grades[2]);
+	printf("2: %d\n", grades[2]);
+	printf("5: %d\n", grades[5]);
+	printf("6: %d\n", grades[6]);
+	printf("8: %c\n", grades[8]);
 
 	printf("tedium: %zd\n", sizeof(tedium));
 	printf("greet: %zd\n", sizeof(greeting));
