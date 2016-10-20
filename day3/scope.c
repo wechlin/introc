@@ -18,7 +18,7 @@ int main(void)
 
 int iterator(void)
 {
-	int x = 0;
+	static int x = 0;
 
 	x += 1;
 
