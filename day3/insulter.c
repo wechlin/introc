@@ -9,11 +9,20 @@ int main(void)
 
 	printf("Please enter your name: ");
 
+	// TODO: Check result of fgets
 	fgets(name, sizeof(name), stdin);
 
 	size_t len = strlen(name);
 	name[len - 1] = '\0';
 
 	printf("%s is smelly\n", name);
+
+	// -k, 0, k
+	// -k name < "Stephen"
+	//  0 name == "Stephen"
+	//  k name > "Stephen"
+	if(0 == strncmp(name, "Stephen", sizeof(name))) {
+		puts("Learn to phucking spell");
+	}
 }
 
