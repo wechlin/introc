@@ -25,8 +25,14 @@ int main(void)
 		puts("Learn to phucking spell");
 	}
 
+	// TODO: Check return value
 	strncat(name, "head", sizeof(name) - len);
 
 	printf("%s, %s, is a stupid %s\n", name, name, name);
+
+	// TODO: Check return value
+	snprintf(name, sizeof(name), "PFC %s", name);
+
+	printf("Ha, ha, %s is so dumb\n", name);
 }
 
