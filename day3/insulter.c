@@ -9,5 +9,6 @@ int main(void)
 
 	fgets(name, sizeof(name), stdin);
 
-	printf("%s\n", name);
+	printf("%s is smelly\n", name);
 }
+
