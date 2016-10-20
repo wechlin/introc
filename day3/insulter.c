@@ -24,5 +24,9 @@ int main(void)
 	if(0 == strncmp(name, "Stephen", sizeof(name))) {
 		puts("Learn to phucking spell");
 	}
+
+	strncat(name, "head", sizeof(name) - len);
+
+	printf("%s, %s, is a stupid %s\n", name, name, name);
 }
 
