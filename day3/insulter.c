@@ -30,9 +30,10 @@ int main(void)
 
 	printf("%s, %s, is a stupid %s\n", name, name, name);
 
+	char buf[64];
 	// TODO: Check return value
-	snprintf(name, sizeof(name), "PFC %s", name);
+	snprintf(buf, sizeof(name), "PFC %s", name);
 
-	printf("Ha, ha, %s is so dumb\n", name);
+	printf("Ha, ha, %s is so dumb\n", buf);
 }
 
