@@ -1,7 +1,7 @@
 
 #include <stdio.h>
 
-int warming = 76;
+const int WARMING = 76;
 
 int iterator(void);
 
@@ -17,14 +17,14 @@ int main(void)
 	value = iterator();
 	printf("%d\n", value);
 
-	printf("warming: %d\n", warming);
+	printf("WARMING: %d\n", WARMING);
 }
 
 int iterator(void)
 {
 	static int x = 0;
 
-	printf(" in iter: %d\n", warming);
+	printf(" in iter: %d\n", WARMING);
 
 	x += 1;
 
