@@ -32,18 +32,12 @@ int main(void)
 
 	printf("%s, %s, is a stupid %s\n", name, name, name);
 
-	char buf[64];
+	char buf[128];
 	// TODO: Check return value
 	snprintf(buf, sizeof(name), "PFC %s", name);
-	copy_string(name, buf);
+	strncpy(name, buf, sizeof(name));
 
 	printf("Ha, ha, %s is so dumb\n", name);
 }
 
 
-void copy_string(char dst[], char src[])
-{
-	for(size_t n = 0; n < strlen(src) - 1; ++n) {
-		dst[n] = src[n];
-	}
-}
