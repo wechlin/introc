@@ -19,11 +19,19 @@ int main(int argc, char *argv[])
 
 int days_in_month(int month)
 {
-	if(month == 1 || month == 3 || month == 5 || month == 7 || month == 8) {
-		return 31;
-	} else {
-		return 30;
+	int days = 0;
+
+	switch(month) {
+		case 4:
+		case 6:
+		case 9:
+		case 11:
+			days = 30;
+			break;
+		default:
+			days = 31;
 	}
 
+	return days;
 }
 
