@@ -2,6 +2,8 @@ CPPFLAGS+=-Wall -Wextra -Wpedantic
 
 CFLAGS+=-std=c11
 
+# CC=gcc
+
 # target: dependecies...
 # 	rules/
 # 	commands
@@ -17,13 +19,13 @@ driver: driver.o calendar.o
 	# compile (cc) into a binary program
 	# naming the output (-o) driver
 	# using the inputs driver.o and calendar.o
-	cc -o $@ $^
+	$(CC) -o $@ $^
 
 driver.o: driver.c
 	# compile (cc) up to the point of object files (-c)
 	# naming the output (-o) driver.o
 	# using the input driver.c
-	cc $(CPPFLAGS) $(CFLAGS) -c -o $@ $^
+	$(CC) $(CPPFLAGS) $(CFLAGS) -c -o $@ $^
 
 # In theory, we could put calendar.h as a dependency
 # here, but tracking every single header we control
@@ -32,7 +34,7 @@ calendar.o: calendar.c
 	# compile (cc) up to the point of object files (-c)
 	# naming the output (-o) calendar.o
 	# using the input calendar.c
-	cc $(CPPFLAGS) $(CFLAGS) -c -o $@ $^
+	$(CC) $(CPPFLAGS) $(CFLAGS) -c -o $@ $^
 
 elmo: children
 	touch elmo
