@@ -18,6 +18,8 @@ DEPS=driver.o calendar.o
 
 $(TARGET): $(DEPS)
 
+.PHONY: clean
+
 # make rules REQUIRE tabs, NEVER spaces
 clean:
 	$(RM) $(DEPS) $(TARGET)
