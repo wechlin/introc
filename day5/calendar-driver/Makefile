@@ -2,11 +2,12 @@ CPPFLAGS+=-Wall -Wextra -Wpedantic
 
 CFLAGS+=-std=c11
 
-# CC=gcc
+TARGET=driver
+DEPS=driver.o calendar.o
 
 # target: dependecies...
-# 	rules/
-# 	commands
+#		rules/
+#		commands
 # Commands are only run
 # if any dependency
 # is NEWER than the target (modified_time)
@@ -15,7 +16,10 @@ CFLAGS+=-std=c11
 # first dependency is stored in $<
 # rest of them is stored in $>
 
-driver: driver.o calendar.o
+$(TARGET): $(DEPS)
 
-elmo: children
-	touch elmo
+.PHONY: clean
+
+# make rules REQUIRE tabs, NEVER spaces
+clean:
+	$(RM) $(DEPS) $(TARGET)
