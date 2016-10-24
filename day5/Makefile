@@ -16,10 +16,6 @@ CFLAGS+=-std=c11
 # rest of them is stored in $>
 
 driver: driver.o calendar.o
-	# compile (cc) into a binary program
-	# naming the output (-o) driver
-	# using the inputs driver.o and calendar.o
-	$(CC) -o $@ $^
 
 elmo: children
 	touch elmo
