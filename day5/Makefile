@@ -23,6 +23,3 @@ $(TARGET): $(DEPS)
 # make rules REQUIRE tabs, NEVER spaces
 clean:
 	$(RM) $(DEPS) $(TARGET)
-
-elmo: children
-	touch elmo
