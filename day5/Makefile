@@ -21,19 +21,11 @@ driver: driver.o calendar.o
 	# using the inputs driver.o and calendar.o
 	$(CC) -o $@ $^
 
-driver.o: driver.c
+# This will pattern-match, using the most explicit rule first
+%.o: %.c
 	# compile (cc) up to the point of object files (-c)
-	# naming the output (-o) driver.o
-	# using the input driver.c
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c -o $@ $^
-
-# In theory, we could put calendar.h as a dependency
-# here, but tracking every single header we control
-# is a bit too much work
-calendar.o: calendar.c
-	# compile (cc) up to the point of object files (-c)
-	# naming the output (-o) calendar.o
-	# using the input calendar.c
+	# naming the output (-o) whatever.o
+	# using the input whatever.c
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c -o $@ $^
 
 elmo: children
