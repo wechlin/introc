@@ -5,8 +5,8 @@ CFLAGS+=-std=c11
 # CC=gcc
 
 # target: dependecies...
-# 	rules/
-# 	commands
+#		rules/
+#		commands
 # Commands are only run
 # if any dependency
 # is NEWER than the target (modified_time)
@@ -16,6 +16,10 @@ CFLAGS+=-std=c11
 # rest of them is stored in $>
 
 driver: driver.o calendar.o
+
+# make rules REQUIRE tabs, NEVER spaces
+clean:
+	rm -f driver.o calendar.o driver
 
 elmo: children
 	touch elmo
