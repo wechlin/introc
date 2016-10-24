@@ -2,7 +2,8 @@ CPPFLAGS+=-Wall -Wextra -Wpedantic
 
 CFLAGS+=-std=c11
 
-# CC=gcc
+TARGET=driver
+DEPS=driver.o calendar.o
 
 # target: dependecies...
 #		rules/
@@ -15,11 +16,11 @@ CFLAGS+=-std=c11
 # first dependency is stored in $<
 # rest of them is stored in $>
 
-driver: driver.o calendar.o
+$(TARGET): $(DEPS)
 
 # make rules REQUIRE tabs, NEVER spaces
 clean:
-	rm -f driver.o calendar.o driver
+	$(RM) $(DEPS) $(TARGET)
 
 elmo: children
 	touch elmo
