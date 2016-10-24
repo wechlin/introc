@@ -9,6 +9,12 @@ CFLAGS+=-std=c11
 # if any dependency
 # is NEWER than the target (modified_time)
 
+driver: driver.o calendar.o
+	# compile (cc) into a binary program
+	# naming the output (-o) driver
+	# using the inputs driver.o and calendar.o
+	cc -o driver driver.o calendar.o
+
 driver.o: driver.c
 	# compile (cc) up to the point of object files (-c)
 	# naming the output (-o) driver.o
